@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd /mnt/E/carla/carla/PythonAPI/examples/nvidia/nurec && python3 -c \\\"\\nimport sys\\nsys.path.insert(0, '.')\\nfrom dggt_integration import DggtScenario\\nfrom dggt_config import DggtConfig\\n...",
-  "error": "Exit code 1\nTraceback (most recent call last):\n  File \"<string>\", line 4, in <module>\n  File \"/mnt/E/carla/carla/PythonAPI/examples/nvidia/nurec/./dggt_integration.py\", line 30, in <module>\n    import grpc\nModuleNotFoundError: No module named 'grpc'",
-  "timestamp": "2026-04-06T07:20:04.408Z",
-  "retry_count": 2
-}

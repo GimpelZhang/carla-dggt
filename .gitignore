@@ -50,6 +50,9 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+tests/
+dggt_server/tests/
+/test_*.py
 
 # Translations
 *.mo
