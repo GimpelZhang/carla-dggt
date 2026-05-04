@@ -1,0 +1,31 @@
+# DGGT Client Configuration
+# Default configuration for DGGT gRPC client
+
+server:
+  host: localhost
+  port: 50051
+  timeout: 30.0  # seconds
+
+scene:
+  # base_path must match DGGT server's scene_base_path
+  # Server default: /home/junchuan/e2e/dggt/output/waymo/training
+  base_path: /home/junchuan/e2e/dggt/output/nuscenes
+  # default_id is relative path from base_path to the scene directory
+  # Use quotes to ensure string type (YAML parses '001' as integer 1)
+  # default_id: "scene1/0328/001"
+  default_id: "scene2/0426/001"
+
+image:
+  format: JPEG
+  quality: 95
+
+coordinate:
+  enabled: true
+
+# Optional: gRPC message size limit
+grpc:
+  max_message_length: 10485760  # 10MB
+
+# Optional: Dynamic objects limit
+dynamic_objects:
+  max_count: 100
