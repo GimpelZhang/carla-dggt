@@ -100,15 +100,15 @@ You can modify the relevant paths in `dggt_engine.py` and run it to validate the
 ### 3. Add the default OpenDrive map
 Put the `data/map.xodr` into scene folders as a default opendrive map for carla simulation. 
 
-### 3. Run CARLA-DGGT Co-Simulation
+### 4. Run CARLA-DGGT Co-Simulation
 
-#### 3.1 Start CARLA
+#### 4.1 Start CARLA
 In your CARLA root directory:
 ```bash
 make launch
 ```
 
-#### 3.2 Start the DGGT Server
+#### 4.2 Start the DGGT Server
 Ensure you are in the `dggt` conda environment and navigate to `PythonAPI/examples/nvidia/nurec`, then run:
 ```bash
 python -m dggt_server \
@@ -119,7 +119,7 @@ python -m dggt_server \
 ```
 *Note: The `--scene-path` should point to the root directory where the simulation scenes are stored (e.g., `output/waymo/training/` which contains `scene0`, `scene1`, etc.).*
 
-#### 3.3 Start the Replay Script
+#### 4.3 Start the Replay Script
 In a new terminal (within the `dggt` conda environment and `PythonAPI/examples/nvidia/nurec` directory), run:
 ```bash
 python example_dggt_replay.py --config configs/dggt_waymo_training_0.yaml --num-frames 20
