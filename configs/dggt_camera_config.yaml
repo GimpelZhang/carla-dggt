@@ -1,0 +1,41 @@
+# DGGT Camera Configuration
+# Format mirrors carla_example_camera_config.yaml for code reuse
+# Grid layout: 2x2 (4 cameras total)
+
+# === DGGT Rendered Cameras (logical_id from DggtRenderer) ===
+# NOTE: DGGT server only provides 'ego_camera' for this scene
+- dggt_camera:
+    logical_id: "ego_camera"  # DGGT server camera ID (only available camera)
+    resolution_ratio: 0.125  # Same as NUREC
+    grid_pos: [0, 0]  # Row 0, Col 0 (top-left)
+
+# === CARLA Standard RGB Cameras ===
+- sensor: rgb
+  attributes:
+    image_size_x: 481
+    image_size_y: 271
+    fov: 90
+  transform:
+    location: {x: 0, y: 0, z: 10}
+    rotation: {pitch: -90, yaw: 0, roll: 0}
+  grid_pos: [0, 1]  # Row 0, Col 1 (top-right, bird's eye view)
+
+- sensor: rgb
+  attributes:
+    image_size_x: 481
+    image_size_y: 271
+    fov: 120
+  transform:
+    location: {x: -1.5, y: 0, z: 2.0}
+    rotation: {pitch: 0, yaw: 0, roll: 0}
+  grid_pos: [1, 0]  # Row 1, Col 0 (bottom-left, front-left view)
+
+- sensor: rgb
+  attributes:
+    image_size_x: 481
+    image_size_y: 271
+    fov: 90
+  transform:
+    location: {x: 1.5, y: 0, z: 2.0}
+    rotation: {pitch: 0, yaw: -45, roll: 0}
+  grid_pos: [1, 1]  # Row 1, Col 1 (bottom-right, front-right view)

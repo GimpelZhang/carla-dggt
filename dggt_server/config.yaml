@@ -1,0 +1,21 @@
+# DGGT Render Server Configuration
+
+grpc:
+  host: localhost
+  port: 50051
+
+scene:
+  base_path: /home/junchuan/e2e/dggt/output/waymo/training
+  default_fps: 10.0
+  auto_discover: true
+
+  # Scene ID mapping example (NuRec ID -> DGGT ID)
+  # id_mappings:
+  #   "clipgt-7f360cc2-xxx": "scene1/0328/001"
+
+render:
+  default_format: JPEG
+  default_quality: 95.0
+
+cache:
+  max_cached_scenes: 10
