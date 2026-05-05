@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenDRIVE>
+    <header revMajor="1" revMinor="4" name="FlatPlane1000x1000" version="1.0" date="2026-04-11T12:00:00" north="0.0" south="0.0" east="0.0" west="0.0" vendor="Custom"/>
+    <road name="GroundPlane" length="1000.0" id="1" junction="-1">
+        <planView>
+            <geometry s="0.0" x="0.0" y="0.0" hdg="0.0" length="1000.0">
+                <line/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation s="0.0" a="-0.6" b="0.0" c="0.0" d="0.0"/>
+        </elevationProfile>
+        <lateralProfile>
+            <superelevation s="0.0" a="0.0" b="0.0" c="0.0" d="0.0"/>
+        </lateralProfile>
+        <lanes>
+            <laneSection s="0.0">
+                <left>
+                    <lane id="-1" type="driving" level="false">
+                        <width sOffset="0.0" a="500.0" b="0.0" c="0.0" d="0.0"/>
+                        <roadMark sOffset="0.0" type="none" weight="standard" color="standard" width="0.0"/>
+                    </lane>
+                </left>
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0.0" type="none" weight="standard" color="standard" width="0.0"/>
+                    </lane>
+                </center>
+                <right>
+                    <lane id="1" type="driving" level="false">
+                        <width sOffset="0.0" a="500.0" b="0.0" c="0.0" d="0.0"/>
+                        <roadMark sOffset="0.0" type="none" weight="standard" color="standard" width="0.0"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+</OpenDRIVE>
