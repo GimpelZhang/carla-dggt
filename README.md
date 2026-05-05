@@ -97,6 +97,9 @@ You can modify the relevant paths in `dggt_engine.py` and run it to validate the
 
 ![DGGT Engine Output](images/dggt_engine_output.png)
 
+### 3. Add the default OpenDrive map
+Put the `data/map.xodr` into scene folders as a default opendrive map for carla simulation. 
+
 ### 3. Run CARLA-DGGT Co-Simulation
 
 #### 3.1 Start CARLA
