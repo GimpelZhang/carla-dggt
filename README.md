@@ -8,6 +8,16 @@
 
 By leveraging the **DGGT (Driving Gaussian Grounded Transformer)** framework, this project enables the reconstruction of editable 3D scenes directly from unposed RGB images in a single forward pass, effectively filling the "last piece of the puzzle" for scalable simulation.
 
+Videos:
+
+[![Turn DGGT inference codes into a rendering engine](https://i0.hdslb.com/bfs/archive/64eadaff04ee26642990e535e1a8fe479e988b54.jpg@.avif)](https://www.bilibili.com/video/BV1CHR1BTENv/)
+
+[![CARLA-DGGT Co-Simulation](https://i0.hdslb.com/bfs/archive/5823dcac1cff51b3254bda3946d4b7cbf792b00d.jpg@.avif)](https://www.bilibili.com/video/BV1CJR1BBEW2/)
+
+Blog article: 
+
+[代替NVIDIA NuRec，CARLA-DGGT使用前馈重建与仿真软件联合仿真](https://mp.weixin.qq.com/s/yQiqC8vvOeXfA8iYlyOhWQ)
+
 ### 🚀 What This Project Does
 
 The core objective of `carla-dggt` is to replace the closed-source NuRec Render Server with a self-developed **DGGT Render Server**, allowing for deep customization of the rendering pipeline and digital assets.
@@ -97,15 +107,18 @@ You can modify the relevant paths in `dggt_engine.py` and run it to validate the
 
 ![DGGT Engine Output](images/dggt_engine_output.png)
 
-### 3. Run CARLA-DGGT Co-Simulation
+### 3. Add the default OpenDrive map
+Put the `data/map.xodr` into scene folders as a default opendrive map for carla simulation. 
 
-#### 3.1 Start CARLA
+### 4. Run CARLA-DGGT Co-Simulation
+
+#### 4.1 Start CARLA
 In your CARLA root directory:
 ```bash
 make launch
 ```
 
-#### 3.2 Start the DGGT Server
+#### 4.2 Start the DGGT Server
 Ensure you are in the `dggt` conda environment and navigate to `PythonAPI/examples/nvidia/nurec`, then run:
 ```bash
 python -m dggt_server \
@@ -116,7 +129,7 @@ python -m dggt_server \
 ```
 *Note: The `--scene-path` should point to the root directory where the simulation scenes are stored (e.g., `output/waymo/training/` which contains `scene0`, `scene1`, etc.).*
 
-#### 3.3 Start the Replay Script
+#### 4.3 Start the Replay Script
 In a new terminal (within the `dggt` conda environment and `PythonAPI/examples/nvidia/nurec` directory), run:
 ```bash
 python example_dggt_replay.py --config configs/dggt_waymo_training_0.yaml --num-frames 20
