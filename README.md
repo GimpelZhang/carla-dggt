@@ -8,6 +8,12 @@
 
 By leveraging the **DGGT (Driving Gaussian Grounded Transformer)** framework, this project enables the reconstruction of editable 3D scenes directly from unposed RGB images in a single forward pass, effectively filling the "last piece of the puzzle" for scalable simulation.
 
+[![Turn DGGT inference codes into a rendering engine](https://i0.hdslb.com/bfs/archive/64eadaff04ee26642990e535e1a8fe479e988b54.jpg@.avif)](https://www.bilibili.com/video/BV1CHR1BTENv/)
+
+[![CARLA-DGGT Co-Simulation](https://i0.hdslb.com/bfs/archive/5823dcac1cff51b3254bda3946d4b7cbf792b00d.jpg@.avif)](https://www.bilibili.com/video/BV1CJR1BBEW2/)
+
+[代替NVIDIA NuRec，CARLA-DGGT使用前馈重建与仿真软件联合仿真](https://mp.weixin.qq.com/s/yQiqC8vvOeXfA8iYlyOhWQ)
+
 ### 🚀 What This Project Does
 
 The core objective of `carla-dggt` is to replace the closed-source NuRec Render Server with a self-developed **DGGT Render Server**, allowing for deep customization of the rendering pipeline and digital assets.
